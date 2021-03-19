@@ -1,7 +1,7 @@
 # MyBatis 
 ##### 03.19 최신화
 
-###환경
+### 의존성
 ```text
 	- MyBatis Framework
 	- MySQL Driver
