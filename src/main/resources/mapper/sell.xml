@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.park.mybatisex01.repository.SellRepository">
+    
+  <!-- select는 resultType이 필요하다 -->
+  <!-- 줄 바꿈을 할 땐 끝에 공백이 있어야 합니다. -->
+  <select id="findByIdAndJoin" resultType="com.park.mybatisex01.model.beans.SellBean">
+  	select s.id, s.username, p.name, p.code 
+	from sell s inner join product p 
+	on s.productId = p.id 
+	where s.id = #{id}
+  </select>
+</mapper>
